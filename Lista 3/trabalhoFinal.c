@@ -8,40 +8,40 @@
 #include <stdlib.h>
 
 // menu principal
-void menu(i);
+void menu();
 // cadastros circuito
 void cadastrar_circuito(int *ponteiro);
-void identificador_circuito(i);
-void nome_do_circuito(i);
-void pais_do_circuito(i);
-void tamanho_do_circuito(i);
+void identificador_circuito(int i);
+void nome_do_circuito(int i);
+void pais_do_circuito(int i);
+void tamanho_do_circuito(int i);
 
 void menor_tempo_circuito();
 
 void cadastrar_volta(int *ponteiro);
-void cadastrar_piloto_em_circuito(i);
-void cadastrar_dia_mes_ano(i);
-void cadastrar_nome_equipe(i);
-void cadastrar_menor_tempo(i);
+void cadastrar_piloto_em_circuito(int i);
+void cadastrar_dia_mes_ano(int i);
+void cadastrar_nome_equipe(int i);
+void cadastrar_menor_tempo(int i);
 
 // relatorio
 void relatorio(int k1, int k2, int k3);
 void consulta_simples(int k1, int k2, int k3);
 void consultar_todos(int k1, int k2, int k3);
-void consultar_id_piloto(k1);
-void consultar_id_circuito(k2);
-void consulta_nome(k1);
-void consultar_circuito(k2);
-void consulta_por_tempo(k3);
+void consultar_id_piloto(int k1);
+void consultar_id_circuito(int k2);
+void consulta_nome(int k1);
+void consultar_circuito(int k2);
+void consulta_por_tempo(int k3);
 
 // Cadastro piloto
 void cadastrar_piloto(int *ponteiro);
 
-void identificar_piloto(i);
-void nome_piloto(i);
-void idade_piloto(i);
-void sexo_piloto(i);
-void pais_origem_piloto(i);
+void identificar_piloto(int i);
+void nome_piloto(int i);
+void idade_piloto(int i);
+void sexo_piloto(int i);
+void pais_origem_piloto(int i);
 
 struct Piloto
 {
@@ -139,7 +139,7 @@ void cadastrar_piloto(int *ponteiro)
   } while (parada != 2);
 }
 
-void identificar_piloto(x)
+void identificar_piloto(int x)
 {
   int cond, i;
 
@@ -161,7 +161,7 @@ void identificar_piloto(x)
   } while (corredores[x].id_piloto < 100 || corredores[x].id_piloto > 500 || cond == 1);
 }
 
-void nome_piloto(x)
+void nome_piloto(int x)
 {
   int MAX_PER, espaso, i;
   // Nome presidente
@@ -188,7 +188,7 @@ void nome_piloto(x)
   } while (MAX_PER < 3 || MAX_PER > 50);
 }
 
-void idade_piloto(x)
+void idade_piloto(int x)
 {
   do
   {
@@ -198,7 +198,7 @@ void idade_piloto(x)
   } while (corredores[x].idade < 18 || corredores[x].idade > 60);
 }
 
-void sexo_piloto(x)
+void sexo_piloto(int x)
 {
   do
   {
@@ -208,7 +208,7 @@ void sexo_piloto(x)
   } while (corredores[x].sexo != 'm' && corredores[x].sexo != 'M' && corredores[x].sexo != 'f' && corredores[x].sexo != 'F');
 }
 
-void pais_origem_piloto(x)
+void pais_origem_piloto(int x)
 {
   // Pais origem
   int MAX_PER, espaso, i;
@@ -259,13 +259,13 @@ void cadastrar_circuito(int *j_circuito)
   } while (parada != 2);
 }
 
-void identificador_circuito(x)
+void identificador_circuito(int x)
 {
   percursos[x].codigo_seq = 100 + x;
   printf("%d cadastrado\n", 100 + x);
 }
 
-void nome_do_circuito(x)
+void nome_do_circuito(int x)
 {
   int MAX_PER, espaso, i, comparar, existe;
   // Nome presidente
@@ -303,7 +303,7 @@ void nome_do_circuito(x)
   } while (MAX_PER < 3 || MAX_PER > 50 || existe == 1);
 }
 
-void pais_do_circuito(x)
+void pais_do_circuito(int x)
 {
   int MAX_PER, espaso, i, existe, comparar;
   // Nome presidente
@@ -341,7 +341,7 @@ void pais_do_circuito(x)
   } while (MAX_PER < 3 || MAX_PER > 50 || existe == 1);
 }
 
-void tamanho_do_circuito(x)
+void tamanho_do_circuito(int x)
 {
   do
   {
@@ -386,7 +386,7 @@ void cadastrar_volta(int *j_volta)
   } while (parada != 2);
 }
 
-void cadastrar_piloto_em_circuito(x)
+void cadastrar_piloto_em_circuito(int x)
 {
   int cond, i;
   do
@@ -422,7 +422,7 @@ void cadastrar_piloto_em_circuito(x)
   } while (voltas[x].codigo2_seq < 100 || voltas[x].codigo2_seq > 500 || cond == 0);
 }
 
-void cadastrar_dias_mes_ano(x)
+void cadastrar_dias_mes_ano(int x)
 {
   int verificar, i;
 
@@ -466,7 +466,7 @@ void cadastrar_dias_mes_ano(x)
   } while (verificar != 0);
 }
 
-void cadastrar_nome_equipe(x)
+void cadastrar_nome_equipe(int x)
 {
 
   int MAX_PER, espaso, i, comparar, existe;
@@ -493,7 +493,7 @@ void cadastrar_nome_equipe(x)
   } while (MAX_PER < 3 || MAX_PER > 50);
 }
 
-void cadastrar_menor_tempo(x)
+void cadastrar_menor_tempo(int x)
 {
   do
   {
@@ -631,7 +631,7 @@ void consultar_todos(int t1, int t2, int t3)
   }
 }
 
-void consultar_id_piloto(t1)
+void consultar_id_piloto(int t1)
 {
   int i, escolha;
 
@@ -649,7 +649,7 @@ void consultar_id_piloto(t1)
   }
 }
 
-void consultar_id_circuito(t2)
+void consultar_id_circuito(int t2)
 {
   int i, escolha;
 
@@ -670,7 +670,7 @@ void consultar_id_circuito(t2)
   }
 }
 
-void consulta_nome(k1)
+void consulta_nome(int k1)
 {
   int i;
   char temporaria[50];
@@ -689,7 +689,7 @@ void consulta_nome(k1)
   }
 }
 
-void consultar_circuito(k3)
+void consultar_circuito(int k3)
 {
   int id_temp, i;
 
@@ -707,14 +707,10 @@ void consultar_circuito(k3)
   }
 }
 
-void consulta_por_tempo(k3)
+void consulta_por_tempo(int k3)
 {
   int min_temp, seg_temp, mil_temp, menor_time;
   int i, j, milessecundos = 0;
-
-
-
-
 
   do
   {
@@ -750,3 +746,4 @@ void consulta_por_tempo(k3)
   }
   
 }
+
