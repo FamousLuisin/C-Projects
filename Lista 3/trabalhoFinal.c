@@ -20,7 +20,7 @@ void menor_tempo_circuito();
 
 void cadastrar_volta(int *ponteiro);
 void cadastrar_piloto_em_circuito(int i);
-void cadastrar_dia_mes_ano(int i);
+void cadastrar_dias_mes_ano(int i);
 void cadastrar_nome_equipe(int i);
 void cadastrar_menor_tempo(int i);
 
@@ -224,7 +224,7 @@ void pais_origem_piloto(int x)
 
     for (i = 0; i < MAX_PER; i++)
     {
-      if (corredores[x].pais_origem == ' ')
+      if (corredores[x].pais_origem[i] == ' ')
       {
         espaso += 1;
       }
