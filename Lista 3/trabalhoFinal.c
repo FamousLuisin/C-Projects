@@ -367,16 +367,6 @@ void cadastrar_volta(int *j_volta)
 
     ++*j_volta;
 
-    // printf("%d\n", percursos[0].id_piloto_menor_tempo);
-    // printf("%d\n", percursos[0].mtempo_min);
-    // printf("%d\n", percursos[0].mtempo_seg);
-    // printf("%d\n", percursos[0].mtempo_mil);
-
-    // printf("%d\n", percursos[1].id_piloto_menor_tempo);
-    // printf("%d\n", percursos[1].mtempo_min);
-    // printf("%d\n", percursos[1].mtempo_seg);
-    // printf("%d\n", percursos[1].mtempo_mil);
-
     printf("Deseja continuar? [1]Sim / [2]Nao\n");
     fflush(stdin);
     scanf("%d", &parada);
@@ -746,4 +736,3 @@ void consulta_por_tempo(int k3)
   }
   
 }
-
